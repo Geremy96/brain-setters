@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading</title>
+    <link href="tercera4.css" rel="stylesheet" type="text/css" />
+    <link href="evo-calendar.min.css" rel="stylesheet">
+    <link href="evo-calendar.midnight-blue.min.css" rel="stylesheet" <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logos/logoazul.png">
+
+<!--Primera parte del carrusel-->
+<style>
+    .slide {
+        position: relative;
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+        margin-top: 26px;
+    }
+    .slide-inner {
+        position: relative;
+        overflow: hidden;
+        width: 0 auto;
+        height: 0 auto;
+    }
+    .slide-open:checked + .slide-item {
+        position: static;
+        opacity: 100;
+    }
+    .slide-item {
+        position: absolute;
+        opacity: 0;
+        -webkit-transition: opacity 0.6s ease-out;
+        transition: opacity 0.6s ease-out;
+    }
+    .slide-item img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+    .slide-control {
+        background: rgba(0, 0, 0, 0.28);
+        border-radius: 50%;
+        color: #fff;
+        cursor: pointer;
+        display: none;
+        font-size: 40px;
+        height: 40px;
+        line-height: 35px;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+        cursor: pointer;
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        text-align: center;
+        width: 40px;
+        z-index: 10;
+    }
+    .slide-control.prev {
+        left: 2%;
+    }
+    .slide-control.next {
+        right: 2%;
+    }
+    .slide-control:hover {
+        background: rgba(0, 0, 0, 0.8);
+        color: #aaaaaa;
+    }
+    #slide-1:checked ~ .control-1,
+    #slide-2:checked ~ .control-2,
+    #slide-3:checked ~ .control-3 {
+        display: block;
+    }
+    .slide-indicador {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 2%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 10;
+    }
+    .slide-indicador li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+    .slide-circulo {
+        color: #828282;
+        cursor: pointer;
+        display: block;
+        font-size: 35px;
+    }
+    .slide-circulo:hover {
+        color: #aaaaaa;
+    }
+    #slide-1:checked ~ .control-1 ~ .slide-indicador 
+         li:nth-child(1) .slide-circulo,
+    #slide-2:checked ~ .control-2 ~ .slide-indicador 
+          li:nth-child(2) .slide-circulo,
+    #slide-3:checked ~ .control-3 ~ .slide-indicador 
+          li:nth-child(3) .slide-circulo {
+        color: #428bca;
+    }
+    #titulo {
+        width: 100%;
+        position: absolute;
+        padding: 0px;
+        margin: 0px auto;
+        text-align: center;
+        font-size: 27px;
+        color: rgba(255, 255, 255, 1);
+        font-family: 'Open Sans', sans-serif;
+        z-index: 9999;
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
+             -1px 0px 2px rgba(255, 255, 255, 0);
+    }
+</style>
+
+</head>
+
+<body>
+    <!--Menu-->
+  <header>
+    <a href="index.html" class="logo">
+        <img src="imagenes/logoazul.png" alt="logo del proyecto">
+        <h2 clas="nav-link">Brain Setters</h2>
+    </a>
+
+    <nav>
+      <ul class="menu-horizontal">
+      <a href="proyecto.html" class="nav-link">Project-Information</a>
+      <li>
+        <a href="#" class="nav-link">Practices</a>
+        <ul class="menu-vertical">
+          <li><a class="nav-link" href="secundaria.html">Physical Practices</a></li>
+          <li><a class="nav-link" href="secundaria1.html">Mental Practices</a></li>
+          <li><a class="nav-link" href="secundaria2.html">Social Practices</a></li>
+        </ul>
+      </li>
+      <a href="nosotros.html" class="nav-link"> About us</a>
+    </ul>
+    </nav>
+  </header>
+
+  <!--Texto "Habito de lecctura"-->
+<h1 class="h1">Reading</h1>
+
+  <!--Segunda parte del carrusel-->
+  <div class="slide">
+    <div class="slide-inner">
+        <input class="slide-open" type="radio" id="slide-1" 
+              name="slide" aria-hidden="true" hidden="" checked="checked">
+        <div class="slide-item">
+          <div class="modificador">
+            <img src="imagenes/lectura carrusel.png">
+          </div>
+        </div>
+        <input class="slide-open" type="radio" id="slide-2" 
+              name="slide" aria-hidden="true" hidden="">
+        <div class="slide-item">
+          <div class="modificador">
+            <img src="imagenes/lectura carrusel 1.png">
+          </div>
+        </div>
+        <input class="slide-open" type="radio" id="slide-3" 
+              name="slide" aria-hidden="true" hidden="">
+        <div class="slide-item">
+          <div class="modificador">
+            <img src="habito de lectura carrusel.jpg">
+          </div>
+        </div>
+      
+        <label for="slide-3" class="slide-control prev control-1"><</label>
+        <label for="slide-2" class="slide-control next control-1">></label>
+        <label for="slide-1" class="slide-control prev control-2"><</label>
+        
+        <label for="slide-3" class="slide-control next control-2">></label>
+        <label for="slide-2" class="slide-control prev control-3"><</label>
+        <label for="slide-1" class="slide-control next control-3">></label>
+        <ol class="slide-indicador">
+            <li>
+                <label for="slide-1" class="slide-circulo">•</label>
+            </li>
+            <li>
+                <label for="slide-2" class="slide-circulo">•</label>
+            </li>
+            <li>
+                <label for="slide-3" class="slide-circulo">•</label>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<!--Calendario-->
+<div>
+    <div class="hero">
+      <div id="calendar"></div>
+    </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="evo-calendar.min.js"></script>
+  
+    <script>
+      $(document).ready(function () {
+        $('#calendar').evoCalendar({
+  
+          calendarEvents: [
+            {
+              id: 'Día 1', // Event's ID (required)
+              name: "Tip", // Event name (required)
+              date: "november/01/2022",// Event date (required)
+              description: "Choose a topic of your interest, and read about it.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#48e120" // Event custom color (optional)
+            },
+            {
+              id: 'Día 2', // Event's ID (required)
+              name: "Tip", // Event name (required)
+              date: "november/02/2022",// Event date (required)
+              description: "Find a quiet place to read today.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#48e120" // Event custom color (optional)
+            },
+            {
+              id: 'Día 3', // Event's ID (required)
+              name: "Tip", // Event name (required)
+              date: "november/03/2022",// Event date (required)
+              description: "Reading poetry can be a good start to the habit of reading, look for poems that interest you",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#48e120" // Event custom color (optional)
+            },
+            {
+              id: 'Día 4', // Event's ID (required)
+              name: "Quotes", // Event name (required)
+              date: "november/04/2022",// Event date (required)
+              description: "Don't worry about reading fast",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#ff0080 " // Event custom color (optional)
+            },
+            {
+              id: 'Día 5', // Event's ID (required)
+              name: "Tip", // Event name (required)
+              date: "november/05/2022",// Event date (required)
+              description: "Your reading time should be enjoyable.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#48e120 " // Event custom color (optional)
+            },{
+              id: 'Día 6', // Event's ID (required)
+              name: "Curious fact", // Event name (required)
+              date: "november/06/2022",// Event date (required)
+              description: "Reading helps creativity",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#FFFF00" // Event custom color (optional)
+            },
+            {
+              id: 'Día 7', // Event's ID (required)
+              name: "Phrase by William Somerset Maugham", // Event name (required)
+              date: "november/07/2022",// Event date (required)
+              description: "Reading does not give you wisdom; it gives you knowledge.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#ff0080" // Event custom color (optional)
+            },
+            {
+              id: 'Día 8', // Event's ID (required)
+              name: "Phrase by J.K  Rowling", // Event name (required)
+              date: "november/08/2022",// Event date (required)
+              description: "If you don't like to read it's because you haven't found the right book.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#ff0080" // Event custom color (optional)
+            },
+            {
+              id: 'Día 9', // Event's ID (required)
+              name: "Phrase by Marian Rojas Estapé", // Event name (required)
+              date: "november/09/2022",// Event date (required)
+              description: "Resilience is our best way to mark our personality. The capacity of the human being to recognize from a trauma and, without being scarred for life, to be happy. It drives us to want to get out of it as quickly as possible, bringing out our true SELF. It helps us to recognize that we need help and that we cannot do it alone. Sharing our simplicity and overcoming the calamities we have suffered. There is only one antidote to suffering, pain and illness: Love",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#ff0080" // Event custom color (optional)
+            },
+            {
+              id: 'Día 10', // Event's ID (required)
+              name: "Tip", // Event name (required)
+              date: "november/10/2022",// Event date (required)
+              description: "Read a book of your interest, don't read it out of obligation, for you to like it, it has to be of interest to you.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#48e120" // Event custom color (optional)
+            },
+            {
+              id: 'Día 11', // Event's ID (required)
+              name: "Curious fact", // Event name (required)
+              date: "november/11/2022",// Event date (required)
+              description: "Reading helps you relax. ",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#FFFF00" // Event custom color (optional)
+            },
+            {
+              id: 'Día 12', // Event's ID (required)
+              name: "Tip", // Event name (required)
+              date: "november/12/2022",// Event date (required)
+              description: "Always carry a book with you, to make the most of your time.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#48e120 " // Event custom color (optional)
+            },
+            {
+              id: 'Día 13', // Event's ID (required)
+              name: "By El cuaderno de Noah", // Event name (required)
+              date: "november/13/2022",// Event date (required)
+              description: "I wonder if the same thing happens to all people my age. My life? It is not easy to describe. It has not been the dizzying, spectacular experience that I would have spectacular experience I would have wished for, but I have not lived underground either,like squirrels.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#ff0080" // Event custom color (optional)
+            },
+            {
+              id: 'Día 14', // Event's ID (required)
+              name: "Phrase by Miguel de Unamuno", // Event name (required)
+              date: "november/14/2022",// Event date (required)
+              description: "He is not illiterate who does not know how to read, but he who, knowing how to read, does not read.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#ff0080 " // Event custom color (optional)
+            },
+            {
+              id: 'Día 15', // Event's ID (required)
+              name: "Quotes", // Event name (required)
+              date: "november/15/2022",// Event date (required)
+              description: "Reading is to the mind as exercise is to the body. Joseph Addison",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#ff0080" // Event custom color (optional)
+            },
+            {
+              id: 'Día 16', // Event's ID (required)
+              name: "By ´Book crime and Punishment´", // Event name (required)
+              date: "november/16/2022",// Event date (required)
+              description: "It is in parting that one feels and understands the strength with which one loves.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#ff0080" // Event custom color (optional)
+            },
+            {
+              id: 'Día 17', // Event's ID (required)
+              name: "Tip", // Event name (required)
+              date: "november/17/2022",// Event date (required)
+              description: "It is valid to change your book if you do not like it.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#48e120 " // Event custom color (optional)
+            },
+            {
+              id: 'Día 18', // Event's ID (required)
+              name: "Tip", // Event name (required)
+              date: "november/18/2022",// Event date (required)
+              description: "If you can't buy books, read virtual ones. ",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#48e120" // Event custom color (optional)
+            },
+            {
+              id: 'Día 19', // Event's ID (required)
+              name: "Book ´Romeo and Julie´", // Event name (required)
+              date: "november/19/2022",// Event date (required)
+              description: "To keep something to help me remember you would be to admit that I can't forget you.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#ff0080" // Event custom color (optional)
+            },
+            {
+              id: 'Día 20', // Event's ID (required)
+              name: "Curious fact", // Event name (required)
+              date: "november/20/2022",// Event date (required)
+              description: "Reading helps you fall asleep.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#FFFF00 " // Event custom color (optional)
+            },
+            {
+              id: 'Día 21', // Event's ID (required)
+              name: "Phrase by William Godwin", // Event name (required)
+              date: "november/21/2022",// Event date (required)
+              description: "Those who love reading have everything at their fingertips.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#ff0080" // Event custom color (optional)
+            },
+            {
+              id: 'Día 22', // Event's ID (required)
+              name: "Phrase by Joseph Addison", // Event name (required)
+              date: "november/22/2022",// Event date (required)
+              description: "Reading is to the mind as exercise is to the body.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#ff0080 " // Event custom color (optional)
+            },
+            {
+              id: 'Día 23', // Event's ID (required)
+              name: "Book ´El principito´", // Event name (required)
+              date: "november/23/2022",// Event date (required)
+              description: "Older people can never understand anything on their own and it is very boring for children to have to explain it to them over and over again.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#ff0080 " // Event custom color (optional)
+            },
+            {
+              id: 'Día 24', // Event's ID (required)
+              name: "Tip", // Event name (required)
+              date: "november/24/2022",// Event date (required)
+              description: "Take advantage of your free time to read.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#48e120 " // Event custom color (optional)
+            },
+            {
+              id: 'Día 25', // Event's ID (required)
+              name: "Curious fact", // Event name (required)
+              date: "november/25/2022",// Event date (required)
+              description: "Reading improves concentration and memory.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#FFFF00 " // Event custom color (optional)
+            },
+            {
+              id: 'Día 26', // Event's ID (required)
+              name: "Phrase by Karl Lagerfeld ", // Event name (required)
+              date: "november/26/2022",// Event date (required)
+              description: "Books are a powerful drug with no risk of overdose.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#ff0080 " // Event custom color (optional)
+            },
+            {
+              id: 'Día 27', // Event's ID (required)
+              name: "Curious fact", // Event name (required)
+              date: "november/27/2022",// Event date (required)
+              description: "In 1959, a librarian in South Carolina called the police because a 9-year-old black boy refused to leave. The boy later earned a doctorate in physics from MIT and died in 1986, as one of the astronauts aboard the space shuttle Challenger. The library that in the past would not let him take books now bears his name, Ronald McNair.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#FFFF00" // Event custom color (optional)
+            },
+            {
+              id: 'Día 28', // Event's ID (required)
+              name: "Book ´El cuaderno de Noah´", // Event name (required)
+              date: "november/28/2022",// Event date (required)
+              description: "You are the answer to all my prayers: you are a song, a dream, a whisper; I don't know how I could have lived without you all these years.",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#ff0080" // Event custom color (optional)
+            },
+            {
+              id: 'Día 29', // Event's ID (required)
+              name: "Tip", // Event name (required)
+              date: "november/29/2022",// Event date (required)
+              description: "Take time out of your day to read",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#48e120 " // Event custom color (optional)
+            },
+            {
+              id: 'Día 30', // Event's ID (required)
+              name: "Curious fact", // Event name (required)
+              date: "november/30/2022",// Event date (required)
+              description: "Reading helps self-knowledge Did you know that: In the 1980s, an Indian man spent 72 hours in a glass booth with 72 snakes, some of which were extremely venomous. His goal was to prove that snakes only attack when provoked. Amazingly, he was not bitten once during those 72 hours and even set a Guinness World Record in the process",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#FFFF00" // Event custom color (optional)
+            },
+          ]
+        })
+      })
+    </script>
+    </div>
+  
+    <!--Iconos de redes sociales-->
+      <main>
+      
+      <div class="icon">
+        <svg height="80" width="80">
+          <circle cx="40" cy="40" r=35 stroke="white" stoke-width="4" fill="none"></circle>
+        </svg>
+        <i class="bx bxl-instagram"></i>
+      </div>
+  
+      <div class="icon">
+        <svg height="80" width="80">
+          <circle cx="40" cy="40" r=35 stroke="white" stoke-width="4" fill="none"></circle>
+        </svg>
+        <i class='bx bxl-facebook-circle'></i>
+      </div>
+  
+      <div class="icon">
+        <svg height="80" width="80">
+          <circle cx="40" cy="40" r=35 stroke="white" stoke-width="4" fill="none"></circle>
+        </svg>
+        <i class='bx bxl-youtube' ></i>
+      </div>
+  
+      <div class="icon">
+        <svg height="80" width="80">
+          <circle cx="40" cy="40" r=35 stroke="white" stoke-width="4" fill="none"></circle>
+        </svg>
+        <i class='bx bxl-twitter' ></i>
+      </div>
+    </main>
+
+    <!--Pie de pagina-->
+  <footer class="footer">
+    <div class="footer__addr">
+      <h1 class="footer__logo">Brain Setters</h1>
+      
+    <ul class="footer__nav">
+      <li class="nav__item">
+        <h2 class="nav__title">Team Members</h2>
+  
+        <ul class="nav__ul">
+          <li>
+            <a href="#">Dayana Alfaro</a>
+          </li>
+  
+          <li>
+            <a href="#">Alan Juárez</a>
+          </li>
+              
+          <li>
+            <a href="#">Nestor Eduardo</a>
+          </li>
+          
+          <li>
+            <a href="#">Cindy Martínez</a>
+          </li>
+  
+          <li>
+            <a href="#">Geremy Gerardo</a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="nav__item nav__item--extra">
+        <h2 class="nav__title">Technological</h2>
+        
+        <ul class="nav__ul nav__ul--extra">
+          <li>
+            <a href="#">HTML</a>
+          </li>
+          
+          <li>
+            <a href="#">CSS</a>
+          </li>
+
+          <li>
+            <a href="#">Java Script</a>
+          </li>
+
+        <li>
+          <a href="#"> Bootstrap</a>
+        </li>
+      </li>
+    </li>
+
+        <li class="nav__item nav__item--extra">
+          <h2 class="nav__title">Tools</h2>
+          <li>
+            <a href="#">Visual Studio Code</a>
+          </li>
+          
+          <li>
+            <a href="#">Flaticon</a>
+          </li>
+
+          <li>
+            <a href="#">Cana</a>
+          </li>
+
+          <li>
+            <a href="#">Replit</a>
+          </li>
+          
+          <li>
+            <a href="#"></a>
+          </li>
+        </ul>
+        </li>
+      
+      <li class="nav__item">
+        <h2 class="nav__title">Legal</h2>
+        
+        <ul class="nav__ul">
+          <li>
+            <a href="#"> Referencias </a>
+          </li>
+          
+          <li>
+            <a href="#"> Permiso de imagen </a>
+          </li>
+          
+          <li>
+            <a href="#"> Iconos Proyectos </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    
+    <div class="legal">
+      <p>&copy; Expo 2022, Snapping back into reality</p>
+      
+      <div class="legal__links">
+        <span>Made with <span class="heart">♥</span>HTML, CSS, Passion</span>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

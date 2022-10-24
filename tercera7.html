@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assertiveness Practices</title>
+    <link href="tercera7.css" rel="stylesheet" type="text/css" />
+    <link href="evo-calendar.min.css" rel="stylesheet">
+    <link href="evo-calendar.midnight-blue.min.css" rel="stylesheet" <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logos/logoazul.png">
+
+<!--Primera parte del carrusel-->
+<style> 
+    .slide {
+        position: relative;
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+        margin-top: 26px;
+    }
+    .slide-inner {
+        position: relative;
+        overflow: hidden;
+        width: 0 auto;
+        height: 0 auto;
+    }
+    .slide-open:checked + .slide-item {
+        position: static;
+        opacity: 100;
+    }
+    .slide-item {
+        position: absolute;
+        opacity: 0;
+        -webkit-transition: opacity 0.6s ease-out;
+        transition: opacity 0.6s ease-out;
+    }
+    .slide-item img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+    .slide-control {
+        background: rgba(0, 0, 0, 0.28);
+        border-radius: 50%;
+        color: #fff;
+        cursor: pointer;
+        display: none;
+        font-size: 40px;
+        height: 40px;
+        line-height: 35px;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+        cursor: pointer;
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        text-align: center;
+        width: 40px;
+        z-index: 10;
+    }
+    .slide-control.prev {
+        left: 2%;
+    }
+    .slide-control.next {
+        right: 2%;
+    }
+    .slide-control:hover {
+        background: rgba(0, 0, 0, 0.8);
+        color: #aaaaaa;
+    }
+    #slide-1:checked ~ .control-1,
+    #slide-2:checked ~ .control-2,
+    #slide-3:checked ~ .control-3 {
+        display: block;
+    }
+    .slide-indicador {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 2%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 10;
+    }
+    .slide-indicador li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+    .slide-circulo {
+        color: #828282;
+        cursor: pointer;
+        display: block;
+        font-size: 35px;
+    }
+    .slide-circulo:hover {
+        color: #aaaaaa;
+    }
+    #slide-1:checked ~ .control-1 ~ .slide-indicador 
+         li:nth-child(1) .slide-circulo,
+    #slide-2:checked ~ .control-2 ~ .slide-indicador 
+          li:nth-child(2) .slide-circulo,
+    #slide-3:checked ~ .control-3 ~ .slide-indicador 
+          li:nth-child(3) .slide-circulo {
+        color: #428bca;
+    }
+    #titulo {
+        width: 100%;
+        position: absolute;
+        padding: 0px;
+        margin: 0px auto;
+        text-align: center;
+        font-size: 27px;
+        color: rgba(255, 255, 255, 1);
+        font-family: 'Open Sans', sans-serif;
+        z-index: 9999;
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
+             -1px 0px 2px rgba(255, 255, 255, 0);
+    }
+</style>
+
+</head>
+
+<body>
+    <!--Menu-->
+  <header>
+    <a href="index.html" class="logo">
+        <img src="imagenes/logoazul.png" alt="logo del proyecto">
+        <h2 clas="nav-link">Brain Setters</h2>
+    </a>
+
+    <nav>
+      <ul class="menu-horizontal">
+      <a href="proyecto.html" class="nav-link">Project-Information</a>
+      <li>
+        <a href="#" class="nav-link">Practices</a>
+        <ul class="menu-vertical">
+          <li><a class="nav-link" href="secundaria.html">Physical Practices</a></li>
+          <li><a class="nav-link" href="secundaria1.html">Mental Practices</a></li>
+          <li><a class="nav-link" href="secundaria2.html">Social Practices</a></li>
+        </ul>
+      </li>
+      <a href="nosotros.html" class="nav-link"> About us</a>
+    </ul>
+    </nav>
+  </header>
+
+  <!--Texto "Habito de lecctura"-->
+<h1 class="h1">Assertiveness Practices</h1>
+
+  <!--Segunda parte del carrusel-->
+  <div class="slide">
+    <div class="slide-inner">
+        <input class="slide-open" type="radio" id="slide-1" 
+              name="slide" aria-hidden="true" hidden="" checked="checked">
+        <div class="slide-item">
+          <div class="modificador">
+            <img src="imagenes/asertividad carrusel.png">
+          </div>
+        </div>
+        <input class="slide-open" type="radio" id="slide-2" 
+              name="slide" aria-hidden="true" hidden="">
+        <div class="slide-item">
+          <div class="modificador">
+            <img src="habito de lectura carrusel.jpg">
+          </div>
+        </div>
+        <input class="slide-open" type="radio" id="slide-3" 
+              name="slide" aria-hidden="true" hidden="">
+        <div class="slide-item">
+          <div class="modificador">
+            <img src="habito de lectura carrusel.jpg">
+          </div>
+        </div>
+      
+        <label for="slide-3" class="slide-control prev control-1"><</label>
+        <label for="slide-2" class="slide-control next control-1">></label>
+        <label for="slide-1" class="slide-control prev control-2"><</label>
+        
+        <label for="slide-3" class="slide-control next control-2">></label>
+        <label for="slide-2" class="slide-control prev control-3"><</label>
+        <label for="slide-1" class="slide-control next control-3">></label>
+        <ol class="slide-indicador">
+            <li>
+                <label for="slide-1" class="slide-circulo">•</label>
+            </li>
+            <li>
+                <label for="slide-2" class="slide-circulo">•</label>
+            </li>
+            <li>
+                <label for="slide-3" class="slide-circulo">•</label>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<!--Calendario-->
+<div>
+    <div class="hero">
+      <div id="calendar"></div>
+    </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="evo-calendar.min.js"></script>
+  
+    <script>
+      $(document).ready(function () {
+        $('#calendar').evoCalendar({
+  
+          calendarEvents: [
+            {
+              id: 'Día 1', // Event's ID (required)
+              name: "Primer Día de Ejercicio", // Event name (required)
+              date: "october/11/2022",// Event date (required)
+              description: "El dia de hoy, tienes como recomendacion tomar mucha agua, caminar dos kilometros y dormir mas de 8 horas",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#63d867" // Event custom color (optional)
+  
+            },
+            {
+              id: 'Día 1', // Event's ID (required)
+              name: "Primer Día de Ejercicio", // Event name (required)
+              date: "january/1/2022",// Event date (required)
+              description: "El dia de hoy, tienes como recomendacion tomar mucha agua, caminar dos kilometros y dormir mas de 8 horas",
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+              color: "#63d867" // Event custom color (optional)
+            }
+          ]
+        })
+      })
+    </script>
+    </div>
+  
+    <!--Iconos de redes sociales-->
+      <main>
+      
+      <div class="icon">
+        <svg height="80" width="80">
+          <circle cx="40" cy="40" r=35 stroke="white" stoke-width="4" fill="none"></circle>
+        </svg>
+        <i class="bx bxl-instagram"></i>
+      </div>
+  
+      <div class="icon">
+        <svg height="80" width="80">
+          <circle cx="40" cy="40" r=35 stroke="white" stoke-width="4" fill="none"></circle>
+        </svg>
+        <i class='bx bxl-facebook-circle'></i>
+      </div>
+  
+      <div class="icon">
+        <svg height="80" width="80">
+          <circle cx="40" cy="40" r=35 stroke="white" stoke-width="4" fill="none"></circle>
+        </svg>
+        <i class='bx bxl-youtube' ></i>
+      </div>
+  
+      <div class="icon">
+        <svg height="80" width="80">
+          <circle cx="40" cy="40" r=35 stroke="white" stoke-width="4" fill="none"></circle>
+        </svg>
+        <i class='bx bxl-twitter' ></i>
+      </div>
+    </main>
+
+    <!--Pie de pagina-->
+  <footer class="footer">
+    <div class="footer__addr">
+      <h1 class="footer__logo">Brain Setters</h1>
+      
+    <ul class="footer__nav">
+      <li class="nav__item">
+        <h2 class="nav__title">Team Members</h2>
+  
+        <ul class="nav__ul">
+          <li>
+            <a href="#">Dayana Alfaro</a>
+          </li>
+  
+          <li>
+            <a href="#">Alan Juárez</a>
+          </li>
+              
+          <li>
+            <a href="#">Nestor Eduardo</a>
+          </li>
+          
+          <li>
+            <a href="#">Cindy Martínez</a>
+          </li>
+  
+          <li>
+            <a href="#">Geremy Gerardo</a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="nav__item nav__item--extra">
+        <h2 class="nav__title">Technological</h2>
+        
+        <ul class="nav__ul nav__ul--extra">
+          <li>
+            <a href="#">HTML</a>
+          </li>
+          
+          <li>
+            <a href="#">CSS</a>
+          </li>
+
+          <li>
+            <a href="#">Java Script</a>
+          </li>
+
+        <li>
+          <a href="#"> Bootstrap</a>
+        </li>
+      </li>
+    </li>
+
+        <li class="nav__item nav__item--extra">
+          <h2 class="nav__title">Tools</h2>
+          <li>
+            <a href="#">Visual Studio Code</a>
+          </li>
+          
+          <li>
+            <a href="#">Flaticon</a>
+          </li>
+
+          <li>
+            <a href="#">Cana</a>
+          </li>
+
+          <li>
+            <a href="#">Replit</a>
+          </li>
+          
+          <li>
+            <a href="#"></a>
+          </li>
+        </ul>
+        </li>
+      
+      <li class="nav__item">
+        <h2 class="nav__title">Legal</h2>
+        
+        <ul class="nav__ul">
+          <li>
+            <a href="#"> Referencias </a>
+          </li>
+          
+          <li>
+            <a href="#"> Permiso de imagen </a>
+          </li>
+          
+          <li>
+            <a href="#"> Iconos Proyectos </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    
+    <div class="legal">
+      <p>&copy; Expo 2022, Snapping back into reality</p>
+      
+      <div class="legal__links">
+        <span>Made with <span class="heart">♥</span>HTML, CSS, Passion</span>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

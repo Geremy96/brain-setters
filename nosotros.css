@@ -126,7 +126,7 @@ nav a:hover{
 
 /*Carrusel*/
 .slider-frame {
-	width: auto;
+	width: 1280px;
   height: auto;
 	margin:50px auto 0;
 	overflow: hidden;
@@ -136,6 +136,7 @@ nav a:hover{
 	display: flex;
 	padding: 0;
 	width: 400%;
+	
 	animation: slide 20s infinite alternate ease-in-out;
 }
 
@@ -169,10 +170,13 @@ nav a:hover{
 	text-align: center;
 	padding: 20px;
 }
+
 #seccion3 .container1 {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
+
 .integrantes{
   padding-top: 25px;
 	text-align: center;
@@ -187,8 +191,8 @@ h3{
 	font-size: 28px;
 }
 .sucursales {
-    padding-left: 45px;
-	  margin: 10px 20px;
+  padding-left: 100px;
+	margin: 10 px;
 }
 .sucursales img {
 	width: 230px;

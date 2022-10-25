@@ -126,7 +126,7 @@ nav a:hover{
 
 /*Carrusel*/
 .slider-frame {
-	width: 1280px;
+	width: auto;
   height: auto;
 	margin:50px auto 0;
 	overflow: hidden;
@@ -191,8 +191,8 @@ h3{
 	font-size: 28px;
 }
 .sucursales {
-  padding-left: 100px;
-	margin: 10 px;
+  padding-left: 45px;
+	margin: 10px 20px;
 }
 .sucursales img {
 	width: 230px;

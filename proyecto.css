@@ -175,6 +175,7 @@ nav a:hover{
 	font-size: 45px;
 }
 #seccion1 p {
+  text-align: justify;
 	font-family: Tahoma;
 	width: 73%;
 	margin-left: 12%;
@@ -197,7 +198,8 @@ nav a:hover{
 	margin-right: 12%;
 	margin-top: 2%;
 	margin-bottom: 1%; 
-  text-align: center;
+  text-align: justify;
+  
 }
 #seccion3 .container1 {
 	display: flex;

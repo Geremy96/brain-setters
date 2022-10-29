@@ -301,7 +301,8 @@ svg circle{
     text-decoration: none;
     overflow: hidden;
     transition: 0.2s;
-  }
+    margin: auto;
+    }
   
   .btn-neon:hover{
     background: #caeeff;
@@ -380,6 +381,7 @@ svg circle{
     text-decoration: none;
     overflow: hidden;
     transition: 0.2s;
+    margin: auto;
   }
   
   .btn-neon1:hover{
@@ -459,6 +461,7 @@ svg circle{
     text-decoration: none;
     overflow: hidden;
     transition: 0.2s;
+    margin: auto;
   }
   
   .btn-neon2:hover{
@@ -530,11 +533,11 @@ svg circle{
 .abajo1{
     align-items: center;
     padding-top: 220px;
-    margin: 50px 60px;
+    margin: auto auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-}
+    justify-content: center;
+  }
 
 /*Pie de pagina*/
 .footer {

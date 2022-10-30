@@ -50,7 +50,6 @@ h2{
     align-items: center;
     text-decoration: none;
     color: #ffffff;
-  text-shadow: 1px 2px 2px black, 0 0 25px blue, 0 0 5px blue;
   text-align: center;
 
 }
@@ -127,7 +126,6 @@ nav a:hover{
 }
 
 /*Imagenes principal*/
-
 #slider {
 	margin-top: 150px;
 	position: relative;
@@ -330,7 +328,7 @@ nav a:hover{
   color: #999;
   padding: 20px;
 }
-  
+   
 .legal__links {
   display: flex;
   align-items: center;

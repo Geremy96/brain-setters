@@ -173,13 +173,13 @@ main{
   }
   
   .icon:hover {
-    background-color: #e60073;
-    box-shadow: 0 0 20px #e60073;
+    background-color: #ff0080;
+    box-shadow: 0 0 20px #ff0080;
   }
   
   .icon:hover:nth-child(2) {
-    background-color: #381cc4;
-    box-shadow: 0 0 20px #381cc4;
+    background-color: #2c02ff;
+    box-shadow: 0 0 20px #2c02ff;
   }
   
   .icon:hover:nth-child(3) {
